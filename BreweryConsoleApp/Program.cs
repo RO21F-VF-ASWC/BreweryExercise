@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using BreweryLib.ThreadCollections;
 
 namespace BreweryConsoleApp
 {
@@ -9,6 +10,9 @@ namespace BreweryConsoleApp
         public static TraceSource TRACE;
         static void Main(string[] args)
         {
+            BoundedBuffer<String> ss = new BoundedBuffer<string>(); // derved default 1.000.000
+            BoundedBuffer<String> ss2 = new BoundedBuffer<string>(100);
+
             TRACE = new TraceSource("Brewery");
             TRACE.Listeners.Add(
                 new TextWriterTraceListener(

@@ -11,7 +11,7 @@ namespace BreweryConsoleApp
     class BreweryWorker
     {
         // Constants
-        private const int NUMBER_OF_BOTTLES = 3000;
+        private const int NUMBER_OF_BOTTLES = 1200;
         private const int BUFFER_LENGTH = NUMBER_OF_BOTTLES / 2;
         private const int Sampling_Number = 149;
         private const int NUMBER_OF_WASHING_THREADS = 3;
